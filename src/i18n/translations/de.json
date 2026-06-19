@@ -13,6 +13,12 @@
     },
     "roles": ["Frontend-Entwickler", "React-Spezialist", "TypeScript-Ingenieur", "UI-Handwerker"]
   },
+  "nav": {
+    "summary": "Zusammenfassung",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "contact": "Kontakt"
+  },
   "summary": {
     "title": "Zusammenfassung",
     "content": "Frontend-Entwickler mit mehr als 5,5 Jahren Erfahrung im Aufbau von kundenorientierten Webanwendungen, die von Millionen von Nutzern verwendet werden. Tiefgehende Expertise in React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3 und SASS, mit praktischer Erfahrung bei der Migration von Legacy-jQuery-Anwendungen auf moderne React-Architekturen. Vertraut mit iterativer, A/B-testgesteuerter Produktentwicklung in agilen Teams zusammen mit UX-, Backend-, Produkt- und Daten-Stakeholdern."

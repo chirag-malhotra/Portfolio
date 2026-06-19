@@ -13,6 +13,12 @@
     },
     "roles": ["Desarrollador Frontend", "Especialista en React", "Ingeniero TypeScript", "Artesano UI"]
   },
+  "nav": {
+    "summary": "Resumen",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
   "summary": {
     "title": "Resumen",
     "content": "Desarrollador Frontend con 5.5+ años de experiencia construyendo aplicaciones web orientadas al cliente utilizadas por millones de usuarios. Experiencia profunda en React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3 y SASS, con experiencia práctica en la migración de aplicaciones heredadas de jQuery a arquitecturas React modernas. Cómodo con desarrollo de productos iterativo impulsado por pruebas A/B en equipos Agile junto a colegas de UX, backend, producto y datos."

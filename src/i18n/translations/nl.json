@@ -13,6 +13,12 @@
     },
     "roles": ["Frontend Ontwikkelaar", "React Specialist", "TypeScript Engineer", "UI Vakman"]
   },
+  "nav": {
+    "summary": "Samenvatting",
+    "skills": "Vaardigheden",
+    "experience": "Ervaring",
+    "contact": "Contact"
+  },
   "summary": {
     "title": "Samenvatting",
     "content": "Frontend Developer met meer als 5,5 jaar ervaring in het bouwen van klantgerichte webapplicaties die door miljoeten gebruikers worden gebruikt. Diepgaande expertise in React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3 en SASS, met praktijkervaring in het migreren van legacy jQuery-applicaties naar moderne React-architecturen. Comfortabel met iteratieve, A/B-testgestuurde productontwikkeling in agile teams samen met UX-, backend-, product- en data-stakeholders."

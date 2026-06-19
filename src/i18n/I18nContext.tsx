@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react'
 import en from './translations/en.json'
 import es from './translations/es.json'
 import de from './translations/de.json'
@@ -6,12 +6,7 @@ import nl from './translations/nl.json'
 
 export type Locale = 'en' | 'es' | 'de' | 'nl'
 
-const translations: Record<Locale, typeof en> = {
-  en,
-  es,
-  de,
-  nl,
-}
+const translations: Record<Locale, typeof en> = { en, es, de, nl }
 
 interface I18nContextType {
   locale: Locale
@@ -33,19 +28,19 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     localStorage.setItem('locale', newLocale)
   }
 
-  const tRaw = (key: string): any => {
+  const tRaw = useCallback((key: string): any => {
     const keys = key.split('.')
     let value: any = translations[locale]
     for (const k of keys) {
       value = value?.[k]
     }
     return value
-  }
+  }, [locale])  // ← recreates when locale changes
 
-  const t = (key: string, defaultValue: string = key): string => {
+  const t = useCallback((key: string, defaultValue: string = key): string => {
     const value = tRaw(key)
     return typeof value === 'string' ? value : defaultValue
-  }
+  }, [tRaw])  // ← recreates when tRaw changes
 
   return (
     <I18nContext.Provider value={{ locale, setLocale, t, tRaw }}>
