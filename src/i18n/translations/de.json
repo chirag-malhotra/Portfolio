@@ -123,6 +123,11 @@
   "contact": {
     "title": "Kontakt",
     "description": "Haben Sie Fragen oder möchten Sie zusammenarbeiten? Schreiben Sie mir eine Nachricht!",
+      "social": {
+      "email": "E-Mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",

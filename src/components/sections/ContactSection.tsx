@@ -112,9 +112,9 @@ const ContactSection: React.FC = () => {
 
         <p className="contact-links">{t('contact.links')}</p>
         <div className="social-links">
-          <a href="mailto:chiragmalhotra3098@gmail.com" className="social-link">Email</a>
-          <a href="https://linkedin.com/in/chiragmalhotra" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-          <a href="https://github.com/chiragmalhotra02" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+          <a href="mailto:chiragmalhotra3098@gmail.com" className="social-link">{t('contact.social.email')}</a>
+          <a href="https://www.linkedin.com/in/chirag-malhotra-383414167" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+          <a href="https://github.com/chirag-malhotra" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
         </div>
       </div>
     </section>
