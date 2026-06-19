@@ -5,7 +5,13 @@
     "location": "Gurgaon, India (bereid om te verhuizen)",
     "email": "chiragmalhotra3098@gmail.com",
     "phone": "+91 9953537746",
-    "cv": "CV downloaden"
+    "cv": "CV downloaden",
+    "greeting": "Hoi, ik ben",
+    "cta": {
+      "connect": "Laten we verbinden",
+      "work": "Bekijk werk"
+    },
+    "roles": ["Frontend Ontwikkelaar", "React Specialist", "TypeScript Engineer", "UI Vakman"]
   },
   "summary": {
     "title": "Samenvatting",
