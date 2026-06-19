@@ -1,0 +1,128 @@
+@import '../../index.css';
+
+.experience {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--border-color);
+
+    @media (max-width: 640px) {
+      left: 10px;
+    }
+  }
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  padding-left: 60px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--bg-primary);
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 640px) {
+    padding-left: 40px;
+
+    &::before {
+      left: 1px;
+    }
+  }
+}
+
+.timeline-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+  }
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.company {
+  font-size: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

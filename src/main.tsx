@@ -1,0 +1,17 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { I18nProvider } from './i18n/I18nContext'
+import store from './store'
+import App from './App'
+import './index.css'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <Provider store={store}>
+      <I18nProvider>
+        <App />
+      </I18nProvider>
+    </Provider>
+  </StrictMode>,
+)

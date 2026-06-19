@@ -1,0 +1,28 @@
+@import '../../index.css';
+
+.summary {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+
+  @media (max-width: 768px) {
+    padding: 3rem 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.summary-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+
+  @media (max-width: 640px) {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

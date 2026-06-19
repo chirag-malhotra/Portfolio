@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "name": "Chirag Malhotra",
+    "title": "Desarrollador Frontend | React · JavaScript (ES6+) · TypeScript · SASS",
+    "location": "Gurgaón, India (abierto a reubicación)",
+    "email": "chiragmalhotra3098@gmail.com",
+    "phone": "+91 9953537746",
+    "cv": "Descargar CV"
+  },
+  "summary": {
+    "title": "Resumen",
+    "content": "Desarrollador Frontend con 5.5+ años de experiencia construyendo aplicaciones web orientadas al cliente utilizadas por millones de usuarios. Experiencia profunda en React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3 y SASS, con experiencia práctica en la migración de aplicaciones heredadas de jQuery a arquitecturas React modernas. Cómodo con desarrollo de productos iterativo impulsado por pruebas A/B en equipos Agile junto a colegas de UX, backend, producto y datos."
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "all": "Todas",
+      "frontend": "Frontend Básico",
+      "frameworks": "Marcos",
+      "testing": "Pruebas",
+      "collaboration": "Colaboración",
+      "backend": "Backend/BD"
+    },
+    "items": {
+      "frontend": "JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS, LESS, Diseño Responsivo",
+      "frameworks": "React.js, Redux, Next.js, Angular, jQuery, React Router, Webpack, Web APIs",
+      "testing": "Jest, Enzyme, React Testing Library, Cypress (TDD & E2E)",
+      "collaboration": "Git, CI/CD, Azure DevOps, JIRA, Kanban, Agile/Scrum",
+      "backend": "Java (Java 8), MySQL, PostgreSQL, SQL Server, APIs REST"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "position": "Ingeniero de Software – Frontend",
+        "company": "Nagarro",
+        "duration": "Mayo 2022–Presente",
+        "highlights": [
+          "Construyó 15+ componentes React reutilizables en 3 módulos de producto, reduciendo la duplicación de código ~35%",
+          "Impulsó mejoras iterativas de UX con equipo de UX/producto en sprints Agile mensuales",
+          "Integró pruebas de comparación de capturas de pantalla Cypress para detectar regresiones de UI antes del despliegue",
+          "Gestionó flujo de estado/datos con Redux; resolvió bugs complejos vía React/Redux DevTools",
+          "Integró APIs REST con desarrolladores backend",
+          "Activo en planificación de sprints, retrospectivas y revisiones de código entre pares"
+        ]
+      },
+      {
+        "position": "Ingeniero de Software – Frontend",
+        "company": "TCS",
+        "duration": "Nov 2020–Mayo 2022",
+        "highlights": [
+          "Lideró migración completa de una aplicación de escritorio heredada a una aplicación web React responsiva para 500+ usuarios empresariales",
+          "Tradujo wireframes de UX en componentes React + Redux perfectos en píxeles",
+          "Integró 10+ bibliotecas de terceros; coordinó entre equipos de diseño, QA y backend",
+          "Se asoció con QA para probar nuevas páginas/módulos antes del lanzamiento",
+          "Manejó peculiaridades entre navegadores y patrones responsivos en navegadores modernos y heredados"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "schools": [
+      {
+        "degree": "B.Tech (Hons.) Ciencias de la Computación e Ingeniería",
+        "percentage": "85.65%",
+        "duration": "2016–2020",
+        "institution": "Instituto Tecnológico HMR, GGSIPU, Nueva Delhi"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "certs": [
+      "Microsoft Certified: Data Analyst Associate (2021)",
+      "Udemy: React – The Complete Guide",
+      "Udemy: Angular – The Complete Guide"
+    ]
+  },
+  "awards": {
+    "title": "Premios",
+    "list": [
+      {
+        "year": "2022",
+        "title": "Premio monetario",
+        "description": "Desempeño excelente, Nagarro"
+      },
+      {
+        "year": "2021",
+        "title": "Premio monetario",
+        "description": "Contribución clave al lanzamiento de producción, TCS"
+      },
+      {
+        "year": "2020",
+        "title": "Certificado de Apreciación",
+        "description": "Colaboración y Orientación de Resultados, TCS"
+      },
+      {
+        "year": "2018",
+        "title": "Top 5 estudiantes",
+        "description": "GGSIPU"
+      },
+      {
+        "year": "2017 y 2018",
+        "title": "Primer Premio",
+        "description": "Batalla de Codificación (dos años consecutivos)"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Tienes una pregunta o quieres colaborar? ¡Escríbeme!",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Tu mensaje aquí...",
+      "submit": "Enviar",
+      "sending": "Enviando...",
+      "validationErrors": {
+        "nameRequired": "El nombre es requerido",
+        "emailRequired": "El correo es requerido",
+        "emailInvalid": "Por favor ingresa un correo válido",
+        "messageRequired": "El mensaje es requerido"
+      },
+      "successMessage": "¡Gracias! Me pondré en contacto pronto.",
+      "errorMessage": "Algo salió mal. Por favor intenta de nuevo."
+    },
+    "links": "O conecta conmigo:"
+  }
+}

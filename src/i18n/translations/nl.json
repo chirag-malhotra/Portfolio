@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "name": "Chirag Malhotra",
+    "title": "Frontend Developer | React · JavaScript (ES6+) · TypeScript · SASS",
+    "location": "Gurgaon, India (bereid om te verhuizen)",
+    "email": "chiragmalhotra3098@gmail.com",
+    "phone": "+91 9953537746",
+    "cv": "CV downloaden"
+  },
+  "summary": {
+    "title": "Samenvatting",
+    "content": "Frontend Developer met meer als 5,5 jaar ervaring in het bouwen van klantgerichte webapplicaties die door miljoeten gebruikers worden gebruikt. Diepgaande expertise in React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3 en SASS, met praktijkervaring in het migreren van legacy jQuery-applicaties naar moderne React-architecturen. Comfortabel met iteratieve, A/B-testgestuurde productontwikkeling in agile teams samen met UX-, backend-, product- en data-stakeholders."
+  },
+  "skills": {
+    "title": "Technische vaardigheden",
+    "categories": {
+      "all": "Alle",
+      "frontend": "Core Frontend",
+      "frameworks": "Frameworks",
+      "testing": "Testen",
+      "collaboration": "Samenwerking",
+      "backend": "Backend/Database"
+    },
+    "items": {
+      "frontend": "JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS, LESS, Responsive Design",
+      "frameworks": "React.js, Redux, Next.js, Angular, jQuery, React Router, Webpack, Web APIs",
+      "testing": "Jest, Enzyme, React Testing Library, Cypress (TDD & E2E)",
+      "collaboration": "Git, CI/CD, Azure DevOps, JIRA, Kanban, Agile/Scrum",
+      "backend": "Java (Java 8), MySQL, PostgreSQL, SQL Server, REST APIs"
+    }
+  },
+  "experience": {
+    "title": "Werkervaring",
+    "jobs": [
+      {
+        "position": "Software Engineer – Frontend",
+        "company": "Nagarro",
+        "duration": "mei 2022–Heden",
+        "highlights": [
+          "15+ herbruikbare React-componenten gebouwd over 3 productmodules, waardoor codeduplicatie met ca. 35% werd verminderd",
+          "Iteratieve UI-verbeteringen gestuurd met UX/product in maandelijkse Agile-sprints",
+          "Cypress-screenshot-vergelijkingstesten geïntegreerd om UI-regressies op te sporen voor deployment",
+          "State/datadoorstroming beheerd met Redux; complexe bugs opgelost via React/Redux DevTools",
+          "REST-API's geïntegreerd met backend-ontwikkelaers",
+          "Actief in sprintplanning, retrospectives en peer-code reviews"
+        ]
+      },
+      {
+        "position": "Software Engineer – Frontend",
+        "company": "TCS",
+        "duration": "nov 2020–mei 2022",
+        "highlights": [
+          "Volledige migratie geleid van een legacy desktop-app naar een responsieve React-web-app voor 500+ zakelijke gebruikers",
+          "UX-wireframes vertaald naar pixel-perfecte React + Redux componenten",
+          "10+ bibliotheken van derden geïntegreerd; contactpersoon tussen design-, QA- en backend-teams",
+          "Samengewerkt met QA aan het testen van nieuwe pagina's/modules voor release",
+          "Omgegaan met cross-browser eigenaardigheden en responsieve patronen in moderne en legacy browsers"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Opleiding",
+    "schools": [
+      {
+        "degree": "B.Tech (Hons.) Computer Science & Engineering",
+        "percentage": "85.65%",
+        "duration": "2016–2020",
+        "institution": "HMR Institute of Technology, GGSIPU, New Delhi"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certificeringen",
+    "certs": [
+      "Microsoft Certified: Data Analyst Associate (2021)",
+      "Udemy: React – The Complete Guide",
+      "Udemy: Angular – The Complete Guide"
+    ]
+  },
+  "awards": {
+    "title": "Prijzen & Onderscheidingen",
+    "list": [
+      {
+        "year": "2022",
+        "title": "Geldprijs",
+        "description": "Uitstekende prestaties, Nagarro"
+      },
+      {
+        "year": "2021",
+        "title": "Geldprijs",
+        "description": "Belangrijke bijdrage aan productierelease, TCS"
+      },
+      {
+        "year": "2020",
+        "title": "Certificaat van waardering",
+        "description": "Samenwerking en resultaatgerichtheid, TCS"
+      },
+      {
+        "year": "2018",
+        "title": "Top 5 studenten",
+        "description": "GGSIPU"
+      },
+      {
+        "year": "2017 & 2018",
+        "title": "Eerste prijs",
+        "description": "Coding Battle (twee opeenvolgende jaren)"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Heeft u een vraag of wilt u samenwerken? Stuur me een bericht!",
+    "form": {
+      "name": "Naam",
+      "namePlaceholder": "Uw naam",
+      "email": "E-mail",
+      "emailPlaceholder": "uw.e-mail@voorbeeld.nl",
+      "message": "Bericht",
+      "messagePlaceholder": "Uw bericht hier...",
+      "submit": "Verzenden",
+      "sending": "Verzenden...",
+      "validationErrors": {
+        "nameRequired": "Naam is verplicht",
+        "emailRequired": "E-mail is verplicht",
+        "emailInvalid": "Voer een geldig e-mailadres in",
+        "messageRequired": "Bericht is verplicht"
+      },
+      "successMessage": "Bedankt! Ik neem snel contact met u op.",
+      "errorMessage": "Er is iets misgegaan. Probeer het opnieuw."
+    },
+    "links": "Of maak verbinding met mij:"
+  }
+}

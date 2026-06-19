@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "name": "Chirag Malhotra",
+    "title": "Frontend Developer | React · JavaScript (ES6+) · TypeScript · SASS",
+    "location": "Gurgaon, India (open to relocation)",
+    "email": "chiragmalhotra3098@gmail.com",
+    "phone": "+91 9953537746",
+    "cv": "Download CV"
+  },
+  "summary": {
+    "title": "Summary",
+    "content": "Frontend Developer with 5.5+ years of experience building customer-facing web applications used by millions of users. Deep expertise in React, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3, and SASS, with hands-on experience migrating legacy jQuery applications to modern React architectures. Comfortable with iterative, A/B-test-driven product development in Agile teams alongside UX, backend, product, and data stakeholders."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "all": "All",
+      "frontend": "Core Frontend",
+      "frameworks": "Frameworks",
+      "testing": "Testing",
+      "collaboration": "Collaboration",
+      "backend": "Backend/DB"
+    },
+    "items": {
+      "frontend": "JavaScript (ES6+), TypeScript, HTML5, CSS3, SASS, LESS, Responsive Design",
+      "frameworks": "React.js, Redux, Next.js, Angular, jQuery, React Router, Webpack, Web APIs",
+      "testing": "Jest, Enzyme, React Testing Library, Cypress (TDD & E2E)",
+      "collaboration": "Git, CI/CD, Azure DevOps, JIRA, Kanban, Agile/Scrum",
+      "backend": "Java (Java 8), MySQL, PostgreSQL, SQL Server, REST APIs"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "position": "Software Engineer – Frontend",
+        "company": "Nagarro",
+        "duration": "May 2022–Present",
+        "highlights": [
+          "Built 15+ reusable React components across 3 product modules, cutting code duplication ~35%",
+          "Drove iterative UI improvements with UX/product in monthly Agile sprints",
+          "Integrated Cypress screenshot-comparison testing to catch UI regressions pre-deployment",
+          "Managed state/data flow with Redux; resolved complex bugs via React/Redux DevTools",
+          "Integrated REST APIs with backend developers",
+          "Active in sprint planning, retrospectives, and peer code reviews"
+        ]
+      },
+      {
+        "position": "Software Engineer – Frontend",
+        "company": "TCS",
+        "duration": "Nov 2020–May 2022",
+        "highlights": [
+          "Led full migration of a legacy desktop app to a responsive React web app for 500+ enterprise users",
+          "Translated UX wireframes into pixel-perfect React + Redux components",
+          "Integrated 10+ third-party libraries; liaised across design, QA, and backend teams",
+          "Partnered with QA on testing new pages/modules before release",
+          "Handled cross-browser quirks and responsive patterns across modern and legacy browsers"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "schools": [
+      {
+        "degree": "B.Tech (Hons.) Computer Science & Engineering",
+        "percentage": "85.65%",
+        "duration": "2016–2020",
+        "institution": "HMR Institute of Technology, GGSIPU, New Delhi"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "certs": [
+      "Microsoft Certified: Data Analyst Associate (2021)",
+      "Udemy: React – The Complete Guide",
+      "Udemy: Angular – The Complete Guide"
+    ]
+  },
+  "awards": {
+    "title": "Awards",
+    "list": [
+      {
+        "year": "2022",
+        "title": "Monetary award",
+        "description": "Excellent performance, Nagarro"
+      },
+      {
+        "year": "2021",
+        "title": "Monetary award",
+        "description": "Key production release contribution, TCS"
+      },
+      {
+        "year": "2020",
+        "title": "Certificate of Appreciation",
+        "description": "Collaboration and Result Orientation, TCS"
+      },
+      {
+        "year": "2018",
+        "title": "Top 5 scholars",
+        "description": "GGSIPU"
+      },
+      {
+        "year": "2017 & 2018",
+        "title": "First Prize",
+        "description": "Coding Battle (two consecutive years)"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Have a question or want to collaborate? Drop me a line!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message here...",
+      "submit": "Send",
+      "sending": "Sending...",
+      "validationErrors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "messageRequired": "Message is required"
+      },
+      "successMessage": "Thank you! I'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again."
+    },
+    "links": "Or connect with me:"
+  }
+}
