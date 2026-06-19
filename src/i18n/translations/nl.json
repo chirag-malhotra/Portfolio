@@ -123,6 +123,11 @@
   "contact": {
     "title": "Contact",
     "description": "Heeft u een vraag of wilt u samenwerken? Stuur me een bericht!",
+      "social": {
+      "email": "E-mail",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "form": {
       "name": "Naam",
       "namePlaceholder": "Uw naam",
