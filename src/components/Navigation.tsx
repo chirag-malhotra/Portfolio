@@ -18,7 +18,7 @@ const LANGUAGES = [
 
 const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
   const dispatch = useDispatch()
-  const { locale, setLocale } = useI18n()
+  const { t, locale, setLocale } = useI18n()
   const theme = useSelector((state: RootState) => state.theme.mode)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLangOpen, setIsLangOpen] = useState(false)
@@ -45,10 +45,10 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
         </div>
 
         <ul className={`nav-sections ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#summary" onClick={() => setIsMenuOpen(false)}>Summary</a></li>
-          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
-          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          <li><a href="#summary" onClick={() => setIsMenuOpen(false)}>{t('nav.summary')}</a></li>
+          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>{t('nav.skills')}</a></li>
+          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>{t('nav.experience')}</a></li>
+          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>{t('nav.contact')}</a></li>
         </ul>
 
         <div className="nav-controls">
