@@ -5,14 +5,18 @@ import { useI18n } from '../i18n/I18nContext'
 import { RootState } from '../store'
 import './Navigation.scss'
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  onOpenTerminal: () => void
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
   const dispatch = useDispatch()
   const { locale, setLocale } = useI18n()
   const theme = useSelector((state: RootState) => state.theme.mode)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setLocale(event.target.value as 'en' | 'es')
+    setLocale(event.target.value as 'en' | 'es' | 'de' | 'nl')
   }
 
   const handleThemeToggle = () => {
@@ -28,26 +32,41 @@ const Navigation: React.FC = () => {
   }
 
   return (
-    <nav className="navigation">
+    <nav className="navigation glass-panel">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="#hero">CM</a>
+          <a href="#hero" className="logo-text">CM</a>
         </div>
+        
         <ul className={`nav-sections ${isMenuOpen ? 'active' : ''}`}>
           <li><a href="#summary" onClick={handleNavClick}>Summary</a></li>
           <li><a href="#skills" onClick={handleNavClick}>Skills</a></li>
           <li><a href="#experience" onClick={handleNavClick}>Experience</a></li>
           <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
         </ul>
+
         <div className="nav-controls">
+          {/* Terminal Console Trigger Button */}
+          <button 
+            className="nav-control-btn terminal-btn" 
+            onClick={onOpenTerminal}
+            aria-label="Open Terminal Console"
+            title="Open Interactive Terminal"
+          >
+            <span>&gt;_</span>
+          </button>
+
+          {/* Theme Switcher Button */}
           <button
-            className="theme-toggle"
+            className="nav-control-btn theme-toggle"
             onClick={handleThemeToggle}
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             title={`${theme === 'light' ? 'Dark' : 'Light'} mode`}
           >
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
+
+          {/* Language Switcher */}
           <select
             className="language-switcher"
             value={locale}
@@ -59,6 +78,8 @@ const Navigation: React.FC = () => {
             <option value="de">Deutsch</option>
             <option value="nl">Nederlands</option>
           </select>
+
+          {/* Hamburger Menu Icon */}
           <button
             className="hamburger-menu"
             onClick={toggleMenu}

@@ -1,32 +1,88 @@
-@import '../index.css';
-
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .main-content {
   flex: 1;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .footer {
   background-color: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--border-color);
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
 
-  @media (max-width: 640px) {
-    padding: 1.5rem;
+/* Floating Action Button (FAB) for CLI Terminal */
+.terminal-fab {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px var(--accent-glow), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 35px var(--accent-glow), 0 0 20px var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Ambient glow orbs in background */
+.bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+  animation: pulse-glow 10s ease-in-out infinite;
+
+  &-1 {
+    top: -10%;
+    left: -10%;
+  }
+
+  &-2 {
+    bottom: 20%;
+    right: -10%;
+    animation-delay: -5s;
   }
 }
