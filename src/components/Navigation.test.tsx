@@ -9,7 +9,9 @@ describe('Navigation - Language Switcher', () => {
     return render(
       <Provider store={store}>
         <I18nProvider>
-          <Navigation />
+          <Navigation onOpenTerminal={function (): void {
+            throw new Error('Function not implemented.')
+          } } />
         </I18nProvider>
       </Provider>,
     )

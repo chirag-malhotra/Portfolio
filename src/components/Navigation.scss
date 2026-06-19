@@ -58,31 +58,31 @@
   }
 
   @media (max-width: 640px) {
-    position: absolute;
-    top: calc(100% + 15px);
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: 0.25rem;
-    padding: 1rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: none;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  // Replace glass-bg with a solid bg so content doesn't bleed through
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  // Remove backdrop-filter — it's what causes the see-through effect
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 
-    &.active {
-      display: flex;
-      max-height: 300px;
-      opacity: 1;
-    }
+  &.active {
+    display: flex;
+    max-height: 300px;
+    opacity: 1;
   }
+}
 
   li {
     a {
@@ -164,32 +164,124 @@
   }
 }
 
-.language-switcher {
-  padding: 0.5rem 2rem 0.5rem 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  height: 2.5rem;
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.6rem center;
-  background-size: 0.9em;
+.lang-switcher {
+  position: relative;
+}
 
-  &:hover {
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.75rem;
+  width: auto;
+  min-width: 5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  &.active {
     border-color: var(--accent);
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--accent-glow);
   }
 
-  &:focus {
-    outline: none;
+  &:hover {
     border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--accent-glow);
+  }
+}
+
+.lang-globe {
+  font-size: 0.9rem;
+}
+
+.lang-code {
+  color: var(--accent);
+}
+
+.lang-chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  color: var(--text-secondary);
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  list-style: none !important;
+  margin: 0;
+  padding: 0.4rem;
+  min-width: 10rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  animation: dropIn 0.15s ease;
+
+  li {
+    list-style: none !important;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &::before,
+    &::marker {
+      display: none;
+      content: none;
+    }
+
+    &:hover {
+      background: var(--bg-secondary);
+
+      .lang-option-full {
+        color: var(--text-primary);
+      }
+    }
+
+    &.active {
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+
+      .lang-option-full {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.lang-option-code {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 1.8rem;
+  letter-spacing: 0.05em;
+}
+
+.lang-option-full {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleTheme } from '../features/theme/themeSlice'
 import { useI18n } from '../i18n/I18nContext'
@@ -9,27 +9,33 @@ interface NavigationProps {
   onOpenTerminal: () => void
 }
 
+const LANGUAGES = [
+  { code: 'en', label: 'EN', full: 'English' },
+  { code: 'es', label: 'ES', full: 'Español' },
+  { code: 'de', label: 'DE', full: 'Deutsch' },
+  { code: 'nl', label: 'NL', full: 'Nederlands' },
+]
+
 const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
   const dispatch = useDispatch()
   const { locale, setLocale } = useI18n()
   const theme = useSelector((state: RootState) => state.theme.mode)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
+  const langRef = useRef<HTMLDivElement>(null)
 
-  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setLocale(event.target.value as 'en' | 'es' | 'de' | 'nl')
-  }
+  const currentLang = LANGUAGES.find(l => l.code === locale) || LANGUAGES[0]
 
-  const handleThemeToggle = () => {
-    dispatch(toggleTheme())
-  }
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const handleNavClick = () => {
-    setIsMenuOpen(false)
-  }
+  // Close lang dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setIsLangOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
     <nav className="navigation glass-panel">
@@ -37,18 +43,17 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
         <div className="nav-logo">
           <a href="#hero" className="logo-text">CM</a>
         </div>
-        
+
         <ul className={`nav-sections ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#summary" onClick={handleNavClick}>Summary</a></li>
-          <li><a href="#skills" onClick={handleNavClick}>Skills</a></li>
-          <li><a href="#experience" onClick={handleNavClick}>Experience</a></li>
-          <li><a href="#contact" onClick={handleNavClick}>Contact</a></li>
+          <li><a href="#summary" onClick={() => setIsMenuOpen(false)}>Summary</a></li>
+          <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
+          <li><a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a></li>
+          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
         </ul>
 
         <div className="nav-controls">
-          {/* Terminal Console Trigger Button */}
-          <button 
-            className="nav-control-btn terminal-btn" 
+          <button
+            className="nav-control-btn terminal-btn"
             onClick={onOpenTerminal}
             aria-label="Open Terminal Console"
             title="Open Interactive Terminal"
@@ -56,33 +61,51 @@ const Navigation: React.FC<NavigationProps> = ({ onOpenTerminal }) => {
             <span>&gt;_</span>
           </button>
 
-          {/* Theme Switcher Button */}
           <button
             className="nav-control-btn theme-toggle"
-            onClick={handleThemeToggle}
+            onClick={() => dispatch(toggleTheme())}
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            title={`${theme === 'light' ? 'Dark' : 'Light'} mode`}
           >
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
 
-          {/* Language Switcher */}
-          <select
-            className="language-switcher"
-            value={locale}
-            onChange={handleLanguageChange}
-            aria-label="Select language"
-          >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-            <option value="nl">Nederlands</option>
-          </select>
+          {/* Custom language dropdown */}
+          <div className="lang-switcher" ref={langRef}>
+            <button
+              className={`lang-trigger nav-control-btn ${isLangOpen ? 'active' : ''}`}
+              onClick={() => setIsLangOpen(prev => !prev)}
+              aria-label="Select language"
+              aria-expanded={isLangOpen}
+            >
+              <span className="lang-globe">🌐</span>
+              <span className="lang-code">{currentLang.label}</span>
+              <span className={`lang-chevron ${isLangOpen ? 'open' : ''}`}>▾</span>
+            </button>
 
-          {/* Hamburger Menu Icon */}
+            {isLangOpen && (
+              <ul className="lang-dropdown" role="listbox">
+                {LANGUAGES.map(lang => (
+                  <li
+                    key={lang.code}
+                    role="option"
+                    aria-selected={locale === lang.code}
+                    className={locale === lang.code ? 'active' : ''}
+                    onClick={() => {
+                      setLocale(lang.code as 'en' | 'es' | 'de' | 'nl')
+                      setIsLangOpen(false)
+                    }}
+                  >
+                    <span className="lang-option-code">{lang.label}</span>
+                    <span className="lang-option-full">{lang.full}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           <button
             className="hamburger-menu"
-            onClick={toggleMenu}
+            onClick={() => setIsMenuOpen(prev => !prev)}
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
           >

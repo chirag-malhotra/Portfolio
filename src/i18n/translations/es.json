@@ -5,7 +5,13 @@
     "location": "Gurgaón, India (abierto a reubicación)",
     "email": "chiragmalhotra3098@gmail.com",
     "phone": "+91 9953537746",
-    "cv": "Descargar CV"
+    "cv": "Descargar CV",
+    "greeting": "Hola, soy",
+    "cta": {
+      "connect": "Conectemos",
+      "work": "Ver Trabajo"
+    },
+    "roles": ["Desarrollador Frontend", "Especialista en React", "Ingeniero TypeScript", "Artesano UI"]
   },
   "summary": {
     "title": "Resumen",
